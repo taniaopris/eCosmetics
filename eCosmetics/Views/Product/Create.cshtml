@@ -1,0 +1,73 @@
+﻿@model CreateUpdateProductViewModel
+
+<form asp-action="Create" method="post" class="form-horizontal" role="form">
+    <h4>Create a new product!</h4>
+
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+
+    <div class="form-group">
+        <label asp-for="Product.Name" class="col-md-2 control-label"></label>
+        <div class="col-md-5">
+            <input asp-for="Product.Name" class="form-control" />
+            <span asp-validation-for="Product.Name" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Product.ShortDescription" class="col-md-2 control-label"></label>
+        <div class="col-md-5">
+            <input asp-for="Product.ShortDescription" class="form-control" />
+            <span asp-validation-for="Product.ShortDescription" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Product.LongDescription" class="col-md-2 control-label"></label>
+        <div class="col-md-5">
+            <input asp-for="Product.LongDescription" class="form-control" />
+            <span asp-validation-for="Product.LongDescription" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Product.Price" class="col-md-2 control-label"></label>
+        <div class="col-md-5">
+            <input asp-for="Product.Price" class="form-control" />
+            <span asp-validation-for="Product.Price" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Product.ImageUrl" class="col-md-2 control-label"></label>
+        <div class="col-md-5">
+            <input asp-for="Product.ImageUrl" class="form-control" />
+            <span asp-validation-for="Product.ImageUrl" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Product.IsProductOfTheWeek" class="col-md-2 control-label"></label>
+        <div class="col-md-5">
+            <input asp-for="Product.IsProductOfTheWeek" class="form-control" />
+            <span asp-validation-for="Product.IsProductOfTheWeek" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="CategoryName">Category</label>
+        <select class="form-control" asp-for="CategoryName">
+            <option>Shampoos</option>
+            <option>Masks</option>
+            <option>Styling & Creams</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-5">
+            <input type="submit" class="btn btn-primary ecosmetics-button" value="Save" />
+        </div>
+    </div>
+
+</form>
+
